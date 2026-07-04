@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Salesforce Validation Manager</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Salesforce Validation Rule Manager</h1>
+
+      <div class="top-bar">
+        <button id="loginBtn">Login with Salesforce</button>
+
+        <button id="getRulesBtn">Get Validation Rules</button>
+      </div>
+
+      <div class="dashboard">
+        <div class="card">
+          <h2 id="totalRules">0</h2>
+          <p>Total Rules</p>
+        </div>
+
+        <div class="card">
+          <h2 id="activeRules">0</h2>
+          <p>Active Rules</p>
+        </div>
+
+        <div class="card">
+          <h2 id="inactiveRules">0</h2>
+          <p>Inactive Rules</p>
+        </div>
+      </div>
+
+      <div class="search-area">
+        <input
+          type="text"
+          id="searchBox"
+          placeholder="Search Validation Rule..."
+        />
+
+        <select id="statusFilter">
+          <option value="all">All</option>
+
+          <option value="active">Active</option>
+
+          <option value="inactive">Inactive</option>
+        </select>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Select</th>
+
+            <th>Validation Rule</th>
+
+            <th>Object</th>
+
+            <th>Status</th>
+          </tr>
+        </thead>
+
+        <tbody id="rulesTable"></tbody>
+      </table>
+      <div id="previewBox" style="display: none; margin-top: 20px">
+        <h3>Preview Changes</h3>
+
+        <pre id="previewContent"></pre>
+      </div>
+
+      <div class="bottom-bar">
+        <button id="previewBtn">Preview Changes</button>
+
+        <button id="deployBtn">Generate Deployment JSON</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

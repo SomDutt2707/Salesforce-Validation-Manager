@@ -17,14 +17,14 @@ let validationRules = [];
 
 // Login
 loginBtn.addEventListener("click", () => {
-  window.location.href = "http://localhost:5000/api/salesforce/login";
+  window.location.href = "http://salesforce-validation-manager-bxs8.onrender.com/api/salesforce/login";
 });
 
 // Get Validation Rules
 getRulesBtn.addEventListener("click", async () => {
   try {
     const response = await fetch(
-      "http://localhost:5000/api/salesforce/validation-rules",
+      "http://salesforce-validation-manager-bxs8.onrender.com/api/salesforce/validation-rules",
       {
         credentials: "include",
       },

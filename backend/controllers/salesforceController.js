@@ -46,7 +46,7 @@ exports.callback = async (req, res) => {
     console.log("Org :", connection.userInfo.organizationId);
     console.log("================================");
 
-    res.redirect("http://localhost:5500/frontend/index.html");
+    res.redirect("https://salesforce-validation-manager-frontend-kyu8.onrender.com");
   } catch (err) {
     console.error(err);
 
